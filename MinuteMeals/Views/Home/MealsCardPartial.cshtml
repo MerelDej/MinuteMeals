@@ -1,0 +1,12 @@
+﻿@model Recipe
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name @Model.CookingTimeInMinutes</h5>
+        
+        @if (Model.CookingTimeInMinutes != 0)
+        {
+            <p> Cooking time: @Model.CookingTimeInMinutes</p>
+        }
+    </div>
+</div>
