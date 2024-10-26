@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using MinuteMeals.Core;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<MealsDbContext>(options => options.UseInMemoryDatabase("MinuteMealsDb"));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

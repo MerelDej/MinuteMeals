@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MinuteMeals.Models;
-using System;
 
 namespace MinuteMeals.Core
 
@@ -11,7 +10,6 @@ namespace MinuteMeals.Core
 
         public void Seed()
         {
-
             var meal = new List<Recipe>
             {
                 new Recipe { Name = "Chicken Tikka Masala", Ingredients = "Chicken marinade: 3 (boneless & skinless) chicken breasts, 125 g plain yogurt, 2 tblsp lemon juice, 6 cloves garlic (minced), 1 tblsp minced ginger, 2 tsp salt, 2 tsp ground cumin, 2 tsp garam masala, 2 tsp paprika\nSauce: 3 tblsp oil, 1 large onion, finely chopped, 2 tblsp minced ginger, 8 cloves garlic (minced), 2 tsp ground cumin, 2 tsp ground turmeric, 2 teaspoons ground coriander, 2 tsp paprika, 2 tsp chili powder, 2 tsp garam masala, 1 tblsp tomato puree, 800 g tomato sauce, 300 ml water, 250 ml heavy cream, 10g fresh cilantro (for garnish), cooked rice (for serving), naan bread (for serving)\nSpecial equipment: bamboo or wooden skewer", Steps = "1. Slice the chicken into bite-sized chunks. Combine the cubed chicken with the yogurt, lemon juice, garlic, ginger, salt, cumin, garam masala, and paprika and stir until well-coated.\n2. Cover and refrigerate for at least 1 hour, or overnight.\n3. Preheat the oven to 260°C. Line a high-sided baking pan or roasting tray with parchment paper.\n4. Place the marinated chicken pieces on bamboo or wooden skewers, then set them over the prepared baking pan, making sure there is space underneath the chicken to help distribute the heat more evenly. Bake for about 15 minutes, until slightly dark brown on the edges.\n5. Make the sauce: Heat the oil in a large pot over medium heat, then sauté the onions, ginger, and garlic until tender but not browned. Add the cumin, turmeric, coriander, paprika, chili powder, and garam masala and stir constantly for about 30 seconds, until the spices are fragrant. Stir in the tomato puree, tomato sauce, and 1 ¼ cups of water, then bring to a boil and cook for about 5 minutes. Pour in the cream.\n6. Remove the chicken from the skewers and add to the sauce, cooking for another 1-2 minutes. Garnish with cilantro and serve over rice or alongside naan bread.", CookingTimeInMinutes = 102 },
@@ -27,7 +25,6 @@ namespace MinuteMeals.Core
             };
 
             Recipes.AddRange(meal);
-
             SaveChanges();
         }
     }

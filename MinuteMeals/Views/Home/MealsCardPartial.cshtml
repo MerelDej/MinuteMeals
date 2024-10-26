@@ -6,8 +6,9 @@
         
         @if (Model.CookingTimeInMinutes > 0 && !string.IsNullOrWhiteSpace(Model.Name))
         {
-            <p class="card-text"><a href="~\Views\Recipes\Index.cshtml">@Model.Name</a></p>
+            <p class="card-text">@Model.Name</p>
             <p class="card-text"> Cooking time: @Model.CookingTimeInMinutes</p>
+            <a asp-controller="Recipes" asp-action="Index" asp-route-id="@Model.Id">Show recipe</a>
         }
     </div>
 </div>
