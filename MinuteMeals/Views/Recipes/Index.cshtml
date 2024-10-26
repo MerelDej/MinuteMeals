@@ -1,6 +1,12 @@
-﻿@{
+﻿@model Recipe
+@{
     ViewData["Title"] = "Recipe";
 }
 
-<h1>Recipe Details</h1>
-
+<h1>@Model.Name Recipe Details</h1>
+<h2>Cooking time: @Model.CookingTimeInMinutes</h2>
+<h2>Ingredients:</h2>
+<p>@Model.Ingredients</p>
+<h2>Steps:</h2>
+<p>@Model.Steps</p>
+<p>Enjoy your meal!</p>

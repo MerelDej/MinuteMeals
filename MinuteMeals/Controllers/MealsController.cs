@@ -16,7 +16,6 @@ namespace MinuteMeals.Controllers
         public IActionResult Index()
         {
             var meals = _mealsDbContext.Recipes.ToList();
-
             return View(meals);
         }
     }

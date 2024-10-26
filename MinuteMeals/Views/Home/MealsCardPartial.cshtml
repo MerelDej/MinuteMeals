@@ -4,9 +4,10 @@
     <div class="card-body">
         <h5 class="card-title">@Model.Name @Model.CookingTimeInMinutes</h5>
         
-        @if (Model.CookingTimeInMinutes != 0)
+        @if (Model.CookingTimeInMinutes > 0 && !string.IsNullOrWhiteSpace(Model.Name))
         {
-            <p> Cooking time: @Model.CookingTimeInMinutes</p>
+            <p class="card-text"><a href="~\Views\Recipes\Index.cshtml">@Model.Name</a></p>
+            <p class="card-text"> Cooking time: @Model.CookingTimeInMinutes</p>
         }
     </div>
 </div>
