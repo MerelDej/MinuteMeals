@@ -12,6 +12,7 @@ namespace MinuteMeals.Controllers
         public HomeController(MealsDbContext mealsDbContext)
         {
             _mealsDbContext = mealsDbContext;
+            _mealsDbContext.Seed();
         }
 
         public IActionResult Index()
@@ -24,6 +25,17 @@ namespace MinuteMeals.Controllers
         {
             return View();
         }
+
+        public IActionResult Recipe(int id)
+        {
+            var recipe = _mealsDbContext.Recipes.FirstOrDefault(r => r.Id == id);
+            if (recipe == null)
+            {
+                return NotFound();
+            }
+            return View(recipe);
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

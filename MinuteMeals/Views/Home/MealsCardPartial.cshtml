@@ -8,7 +8,7 @@
         {
             <p class="card-text">@Model.Name</p>
             <p class="card-text">Cooking time: @Model.CookingTimeInMinutes minutes</p>
-            <a asp-controller="Recipes" asp-action="Index" asp-route-id="@Model.Id">Show recipe</a>
+            <a asp-controller="Home" asp-action="Recipe" asp-route-id="@Model.Id">Show recipe</a>
         }
 
     </div>

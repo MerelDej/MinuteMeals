@@ -1,0 +1,12 @@
+﻿@model Recipe
+@{
+    ViewData["Title"] = "Recipe";
+}
+
+<h1>@Model.Name Recipe Details</h1>
+<h4>Cooking time: @Model.CookingTimeInMinutes</h4>
+<h3>Ingredients:</h3>
+<p>@Html.Raw(Model.Ingredients.Replace("\n", "<br>"))</p>
+<h3>Steps:</h3>
+<p>@Html.Raw(Model.Steps.Replace("\n", "<br>"))</p>
+<p>Enjoy your meal!</p>
