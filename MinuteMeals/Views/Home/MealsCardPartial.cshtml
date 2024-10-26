@@ -2,13 +2,14 @@
 
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">@Model.Name @Model.CookingTimeInMinutes</h5>
-        
+        <h5 class="card-title">@Model.Name</h5>
+
         @if (Model.CookingTimeInMinutes > 0 && !string.IsNullOrWhiteSpace(Model.Name))
         {
             <p class="card-text">@Model.Name</p>
-            <p class="card-text"> Cooking time: @Model.CookingTimeInMinutes</p>
+            <p class="card-text">Cooking time: @Model.CookingTimeInMinutes minutes</p>
             <a asp-controller="Recipes" asp-action="Index" asp-route-id="@Model.Id">Show recipe</a>
         }
+
     </div>
 </div>
